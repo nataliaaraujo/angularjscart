@@ -1,50 +1,48 @@
 <!DOCTYPE html>
 <html ng-app="plunker">
 
-  <head>
-    <meta charset="utf-8" />
-    <title>AngularJS Plunker</title>
-    
-    <script>document.write('<base href="' + document.location + '" />');</script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.2.15/angular-locale_pt-br.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-route.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-animate.min.js"></script>
-    <script src="app.js"></script>
-    <script src="services.js"></script>
-    <script src="controllers.js"></script>
-    
-    <link rel="stylesheet" href="style.css" />
-    
-    <!-- Latest compiled and minified CSS -->
+<head>
+  <meta charset="utf-8" />
+  <title>Cart Example Angular JS</title>
+
+  <script>document.write('<base href="' + document.location + '" />');</script>
+
+  <!--  CDN Angular JS -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.2.15/angular-locale_pt-br.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-route.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-animate.min.js"></script>
+
+  <!-- Angular JS - MVC -->
+  <script src="app.js"></script>
+  <script src="services.js"></script>
+  <script src="controllers.js"></script>
+
+  <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-  
   <!-- Optional theme -->
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-  
   <!-- Latest compiled and minified JavaScript -->
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-  </head>
+  <!-- Style CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-   <body>
-    <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+<body>
+      <!-- Add your site or application content here -->
+      <div class="container">
+        <div class="header">
+          <ul class="nav nav-pills pull-right">
+            <li><a ng-href="#home">Home</a></li>
+            <li><a ng-href="#about">About</a></li>
+          </ul>
+          <h3 class="text-muted">Financeiro</h3>
+        </div>
 
-    <!-- Add your site or application content here -->
-    <div class="container">
-      <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li><a ng-href="#home">Home</a></li>
-          <li><a ng-href="#about">About</a></li>
-        </ul>
-        <h3 class="text-muted">Financeiro</h3>
+        <div ng-view="">{{ load }}</div>
+
       </div>
 
-      <div ng-view="">{{ load }}</div>
+    </body>
 
-    </div>
-    
-  </body>
-
-</html>
+    </html>
